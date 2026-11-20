@@ -1,6 +1,6 @@
 # Store artwork
 
-Artwork for the new IOweTea listings. These files are local source artifacts;
+Artwork for the IOweTea Home listings. These files are local source artifacts;
 the assets repository's root is publicly served by GitHub Pages after it is
 published.
 
@@ -28,6 +28,10 @@ the clock to 13:00 UTC. They are browser renders of the app's WebView content,
 so check each platform's native safe areas, status bar, and the final app build
 before uploading. Replace a screenshot with a device capture if the native
 render differs. The featured cameras are bundled demo stills, not live feeds.
+The Home icon and promotional graphics use the dark, green brand-sheet palette.
+Existing screenshots
+still show the current app UI and the console worksheets retain the old listing
+copy until the app/web naming rollout is ready for review.
 
 To regenerate on this machine, start the demo from `../web`:
 
@@ -39,6 +43,15 @@ Then, from this repository:
 
 ```bash
 node store/generate.mjs
+```
+
+To refresh just the Home listing icons and promotional graphics from the existing
+screenshots, without starting the demo server:
+
+```bash
+python3 brand/generate.py
+node store/generate.mjs --only=branding
+node store/generate-apple-creatives.mjs
 ```
 
 To regenerate only the Google Play large-screen sets:

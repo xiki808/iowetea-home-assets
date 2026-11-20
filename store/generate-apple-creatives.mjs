@@ -1,13 +1,15 @@
 // Rebuild the optional App Store header and search-result images from the
-// existing IOweTea brand artwork and demo screenshots. No web server needed.
+// existing IOweTea Home brand artwork and demo screenshots. No web server needed.
 import { createRequire } from 'node:module'
+import { existsSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 import { mkdir, readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const root = path.dirname(fileURLToPath(import.meta.url))
-const web = path.resolve(root, '../../web')
+const siblingWeb = path.resolve(root, '../../web')
+const web = existsSync(siblingWeb) ? siblingWeb : path.resolve(root, '../../web')
 const require = createRequire(path.join(web, 'package.json'))
 const { chromium } = require('playwright')
 
@@ -23,16 +25,16 @@ const sharedStyle = `
   html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
   body {
     position: relative;
-    color: #f8f9ed;
+    color: #fffdf8;
     font-family: Arial, Helvetica, sans-serif;
     background:
-      radial-gradient(circle at 16% 18%, #89a549 0, #658d45 23%, transparent 49%),
-      linear-gradient(112deg, #4e7c43 0%, #285f3c 48%, #092c25 100%);
+      radial-gradient(circle at 16% 18%, #173923 0, #102018 23%, transparent 49%),
+      linear-gradient(112deg, #0a0f0a 0%, #102018 48%, #1a5228 100%);
   }
   .ring {
     position: absolute; width: 1100px; height: 1100px; left: -340px; top: -400px;
-    border: 2px solid #ffffff44; border-radius: 50%;
-    box-shadow: 0 0 0 160px #ffffff0a, 0 0 0 330px #ffffff09;
+    border: 2px solid #2a874466; border-radius: 50%;
+    box-shadow: 0 0 0 160px #2a874426, 0 0 0 330px #2a87441f;
   }
   .brand {
     position: absolute; z-index: 3; display: flex; align-items: center;
@@ -41,11 +43,11 @@ const sharedStyle = `
   .brand img { width: 84px; height: 84px; border-radius: 20px; }
   .copy { position: absolute; z-index: 3; }
   h1 { margin: 0; font-weight: 750; letter-spacing: -5px; line-height: 1.02; }
-  p { margin: 30px 0 0; color: #f1f5df; line-height: 1.25; }
+  p { margin: 30px 0 0; color: #fffdf8; line-height: 1.25; }
   .phone {
     position: absolute; z-index: 2; overflow: hidden;
-    padding: 10px; background: #0b1d15; border: 4px solid #c0d58f;
-    border-radius: 46px; box-shadow: 0 36px 90px #08241daa;
+    padding: 10px; background: #0a0f0a; border: 4px solid #fffdf8;
+    border-radius: 46px; box-shadow: 0 36px 90px #00000099;
   }
   .phone img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 34px; }
   .phone.home { transform: rotate(-7deg); }
@@ -104,7 +106,7 @@ try {
       await page.setContent(`<!doctype html><html lang="en"><head><meta charset="utf-8">
         <style>${sharedStyle}${design.css}</style></head><body>
         <div class="ring"></div>
-        <div class="brand"><img src="data:image/png;base64,${assets.icon}" alt="">IOweTea</div>
+        <div class="brand"><img src="data:image/png;base64,${assets.icon}" alt="">IOweTea Home</div>
         <div class="copy">${design.copy}</div>
         <div class="phone home"><img src="data:image/png;base64,${assets.home}" alt=""></div>
         <div class="phone camera"><img src="data:image/png;base64,${assets.camera}" alt=""></div>

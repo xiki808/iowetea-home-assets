@@ -2,7 +2,7 @@
 
 ## Repo Overview
 
-A static asset repository for the IOweTea project. It holds brand assets (logo in multiple sizes and themes) and web documents (such as the privacy policy) that need to be publicly accessible. The repository is deployed via **GitHub Pages**, making all files available at:
+A static asset repository for the IOweTea project. It holds the parent and Home marks, matching dark and light icon palettes in multiple sizes, and web documents (such as the privacy policy) that need to be publicly accessible. The repository is deployed via **GitHub Pages**, making all files available at:
 
 ```
 https://xiki808.github.io/iowetea-assets/
@@ -14,18 +14,26 @@ There is no build step — files are served as-is.
 
 ```
 brand/
-├── dark/                       # Dark theme logo variants
-│   ├── iowetea_*.png           # Logo at standard sizes (16, 32, 48, 72, 96, 144, 180, 192, 512, 1024)
-│   ├── favicon.ico             # Browser favicon
-│   ├── manifest.json           # PWA web app manifest
-│   └── staging/
-│       └── iowetea_1024x1024.png  # Staging variant of the logo
-└── light/                      # Light theme logo variants (same structure as dark/)
-    ├── iowetea_*.png
-    ├── favicon.ico
-    ├── manifest.json
-    └── staging/
-        └── iowetea_1024x1024.png
+├── iowetea.svg                 # Parent cup source
+├── iowetea-icon.svg            # Parent cup on brand-sheet background
+├── iowetea-icon-1024.png       # Parent icon reference
+├── iowetea-light.svg           # Parent light mark
+├── iowetea-icon-light.svg      # Parent light icon
+├── iowetea-icon-light-1024.png # Parent light icon reference
+├── home.svg                     # Home source
+├── home-icon.svg                # Home on dark background
+├── home-light.svg               # Home mark for light surfaces
+├── home-icon-light.svg          # Home on warm light background
+├── home-icon-staging.svg        # Home with green staging ribbon
+├── home-icon-staging-light.svg  # Light staging icon
+├── generate.py                 # Regenerate the icon set
+├── sync-consumers.py           # Refresh sibling web and app icon copies
+└── home/
+    ├── icon-*.png              # 16, 32, 48, 72, 96, 144, 180, 192, 512, 1024
+    ├── favicon.ico             # Browser favicon
+    ├── manifest.json           # PWA web app manifest
+    ├── staging/icon-1024.png   # Staging icon
+    └── light/                  # Light sizes, favicon, and PWA manifest
 web-documents/
 ├── privacy-policy.html         # Required by Google Play and Apple App Store for app approval
 ├── account-deletion.html       # Google Play account-deletion URL
@@ -84,7 +92,20 @@ changes.
 
 ## Brand Assets
 
-Logo images are provided in two themes (`dark` / `light`) to suit different UI contexts. Each theme includes:
+The parent IOweTea cup source is `brand/iowetea.svg`. The product mark is
+`brand/home.svg`, with a Wi-Fi teabag and circuits inside and below the cup.
+Both icons use the shared dark `#0A0F0A` background, warm white cup outlines,
+green leaf, and bronze teabag. The parent cup uses Hibiscus `#B55A70`; Home uses
+the web app's primary green `#2A8744` for its liquid and circuits. The liquid
+extends beneath the cup outline so no dark seam appears at the lower edge.
+Light variants use a warm `#F5F2EB` background and charcoal outline, with the
+same leaf, teabag, and product accents. Follow the shared
+[branding contract](../../../branding/contract.md). Run
+`python3 brand/generate.py` and
+`python3 brand/sync-consumers.py` to rebuild and distribute them. Square icons
+center the combined cup and leaf with equal opposite margins to the border;
+the handle and Home circuits below the cup are excluded from that measurement.
+The single `brand/home/` set includes:
 
 - **PNG sizes**: 16×16, 32×32, 48×48, 72×72, 96×96, 144×144, 180×180, 192×192, 512×512, 1024×1024
 - **favicon.ico**: Multi-resolution icon for browser tabs
@@ -101,6 +122,9 @@ screenshots come from the sibling web repo's disposable demo bundle. See
 and platform-specific console worksheets. The privacy-policy page was rewritten
 for the current app, home server and linked services on 2026-10-27; check its
 claims against the final builds and store privacy answers before submission.
+Icons and promotional graphics now use the Home brand. Screenshots and listing
+worksheets still describe the current IOweTea app UI; update and review them
+with the app/web naming rollout before publishing a rebranded listing.
 
 ## Related Repos
 

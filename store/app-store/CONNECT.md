@@ -1,4 +1,4 @@
-# App Store Connect worksheet — IOweTea
+# App Store Connect worksheet — IOweTea Home
 
 Prepared 2026-10-25 for a **new** iOS app, bundle ID
 `app.iowetea.iowetea`. This is a copy-and-check worksheet, not a record of
@@ -9,16 +9,16 @@ uses this bundle ID.
 
 | App Store Connect field | Value to enter |
 | --- | --- |
-| Name (30 characters max) | `IOweTea`, subject to availability alongside the old listing |
+| Name (30 characters max) | `IOweTea Home`, subject to availability alongside the old listing |
 | Bundle ID | `app.iowetea.iowetea` |
 | SKU | `app.iowetea.iowetea` (internal choice; cannot be changed after creation) |
 | Primary language | English (UK), if selected for this record |
 | Subtitle (30 characters max) | `Your home, in reach` |
 | Primary category | Lifestyle (suggested; confirm the best available category) |
-| Privacy Policy URL | `https://xiki808.github.io/iowetea-assets/web-documents/privacy-policy.html` |
-| Support URL | `https://xiki808.github.io/iowetea-assets/web-documents/support.html` |
+| Privacy Policy URL | `https://xiki808.github.io/iowetea-home-assets/web-documents/privacy-policy.html` |
+| Support URL | `https://xiki808.github.io/iowetea-home-assets/web-documents/support.html` |
 | Marketing URL | Leave blank unless a current public product page is available |
-| Privacy Choices URL (optional) | `https://xiki808.github.io/iowetea-assets/web-documents/account-deletion.html` |
+| Privacy Choices URL (optional) | `https://xiki808.github.io/iowetea-home-assets/web-documents/account-deletion.html` |
 | Keywords (100 bytes max) | `smart home,home automation,device control,security,cameras,remote control,VPN` |
 | Version | Use the final signed build's `CFBundleShortVersionString` |
 | Copyright | Enter the actual rights holder and first rights year; do not use `IOweTea` as a legal entity without confirmation |
@@ -26,15 +26,15 @@ uses this bundle ID.
 Description (plain text; under 4,000 characters):
 
 ```text
-IOweTea brings your home controls together on your iPhone or iPad. Connect the app to an IOweTea home server to control compatible devices, view cameras, use configured remotes and manage home security.
+IOweTea Home brings your home controls together on your iPhone or iPad. Connect the app to an IOweTea Home server to control compatible devices, view cameras, use configured remotes and manage home security.
 
 The dashboard includes account and system settings. Available features depend on the devices and services configured in your home.
 
-When away from home Wi-Fi, IOweTea can connect securely to your own home server using an encrypted VPN. You can choose on-demand or always-on VPN behavior.
+When away from home Wi-Fi, IOweTea Home can connect securely to your own home server using an encrypted VPN. You can choose on-demand or always-on VPN behavior.
 
 You can explore a sample home before connecting a server. Select Try the demo on the setup screen to see sample devices, cameras, remotes and security controls. Demo changes reset when you leave it.
 
-A compatible IOweTea home server is required to connect and manage a real home.
+A compatible IOweTea Home server is required to connect and manage a real home.
 ```
 
 Promotional text is optional; it can be left blank. For a new app, “What's New”
@@ -74,7 +74,7 @@ iOS/iPadOS 27 and later; older versions use the regular screenshots.
 ## App Review information
 
 Enter a real contact's **first name, last name, email and international-format
-phone number**. The public support email is `info.iowetea@gmail.com`; confirm
+phone number**. The public support email is `home.support@iowetea.com`; confirm
 who will monitor it during review. No personal phone number belongs in this
 repository.
 
@@ -83,9 +83,9 @@ reviewer can reach this route without a username or password. Put the steps in
 **Notes for Review**, after checking them against the submitted build:
 
 ```text
-On first launch, the Setup IOweTea screen appears. Tap “Try the demo” to open a sample home. No server, account, password or QR code is needed. Use the bottom navigation to view Home, Camera, Remote, Security and Dashboard. The demo Security PIN is 1234, shown on the Dashboard's Demo board. Demo changes reset when you leave the demo.
+On first launch, the Setup IOweTea Home screen appears. Tap “Try the demo” to open a sample home. No server, account, password or QR code is needed. Use the bottom navigation to view Home, Camera, Remote, Security and Dashboard. The demo Security PIN is 1234, shown on the Dashboard's Demo board. Demo changes reset when you leave the demo.
 
-Production setup, physical device integrations and VPN access require an IOweTea home server and cannot be exercised in the demo. The VPN connects only to the user's own server. Contact info.iowetea@gmail.com if you need a hardware walkthrough or additional access.
+Production setup, physical device integrations and VPN access require an IOweTea Home server and cannot be exercised in the demo. The VPN connects only to the user's own server. Contact home.support@iowetea.com if you need a hardware walkthrough or additional access.
 ```
 
 Apple guideline 2.1 says a built-in demo may replace a review account **with

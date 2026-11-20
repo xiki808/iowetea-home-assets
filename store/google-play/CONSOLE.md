@@ -1,4 +1,4 @@
-# Google Play Console worksheet — IOweTea
+# Google Play Console worksheet — IOweTea Home
 
 Prepared 2026-10-25 for a **new** Android app, package `app.iowetea.iowetea`.
 This is a copy-and-check worksheet, not a record of values already entered in
@@ -8,29 +8,29 @@ Play Console. The production Flutter flavor uses this package ID.
 
 | Play Console field | Value to enter |
 | --- | --- |
-| App name (30 characters max) | `IOweTea` |
-| Short description (80 characters max) | `Control your IOweTea home server, cameras, remotes and security.` |
+| App name (30 characters max) | `IOweTea Home` |
+| Short description (80 characters max) | `Control your IOweTea Home server, cameras, remotes and security.` |
 | Primary language | English (United Kingdom), if this is the language selected for the new listing |
 | App type | App |
 | Category | House & Home |
 | Tags | Home automation; Remote control |
-| Contact email | `info.iowetea@gmail.com` |
-| Website / support URL | `https://xiki808.github.io/iowetea-assets/web-documents/support.html` |
-| Privacy policy URL | `https://xiki808.github.io/iowetea-assets/web-documents/privacy-policy.html` |
-| Account-deletion URL | `https://xiki808.github.io/iowetea-assets/web-documents/account-deletion.html` |
+| Contact email | `home.support@iowetea.com` |
+| Website / support URL | `https://xiki808.github.io/iowetea-home-assets/web-documents/support.html` |
+| Privacy policy URL | `https://xiki808.github.io/iowetea-home-assets/web-documents/privacy-policy.html` |
+| Account-deletion URL | `https://xiki808.github.io/iowetea-home-assets/web-documents/account-deletion.html` |
 
 Full description (plain text; under 4,000 characters):
 
 ```text
-IOweTea is the companion app for an IOweTea home server. It brings the controls for your home together on your phone.
+IOweTea Home is the companion app for an IOweTea Home server. It brings the controls for your home together on your phone.
 
 Set up a connection to your home server, then control compatible devices, check cameras, use configured remotes and manage your home security from the app. The dashboard also provides access to account and system settings. Available features depend on the devices and services configured in your home.
 
-When you are away from your home Wi-Fi, IOweTea can use an encrypted VPN connection to reach your own home server. You choose whether the app uses on-demand or always-on VPN behavior.
+When you are away from your home Wi-Fi, IOweTea Home can use an encrypted VPN connection to reach your own home server. You choose whether the app uses on-demand or always-on VPN behavior.
 
-No IOweTea server yet? Open Try the demo from the setup screen to explore a sample home with devices, cameras, remotes and security controls. The demo uses sample data and resets when you leave it.
+No IOweTea Home server yet? Open Try the demo from the setup screen to explore a sample home with devices, cameras, remotes and security controls. The demo uses sample data and resets when you leave it.
 
-A compatible IOweTea home server is needed to connect and manage a real home. Device and camera availability depends on your home setup.
+A compatible IOweTea Home server is needed to connect and manage a real home. Device and camera availability depends on your home setup.
 ```
 
 Upload these files from this repo:
@@ -69,7 +69,7 @@ without credentials. Use these instructions, then verify them on the uploaded
 build:
 
 ```text
-On first launch, the Setup IOweTea screen appears. Tap “Try the demo” to open a sample home. No server, account, password or QR code is needed. Use the bottom navigation to view Home, Camera, Remote, Security and Dashboard. The demo security PIN is 1234, shown on the Dashboard's Demo board. Demo changes reset when leaving the demo. The production setup and VPN require a physical IOweTea home server; contact info.iowetea@gmail.com if the review team needs a hardware walkthrough or additional access.
+On first launch, the Setup IOweTea Home screen appears. Tap “Try the demo” to open a sample home. No server, account, password or QR code is needed. Use the bottom navigation to view Home, Camera, Remote, Security and Dashboard. The demo security PIN is 1234, shown on the Dashboard's Demo board. Demo changes reset when leaving the demo. The production setup and VPN require a physical IOweTea Home server; contact home.support@iowetea.com if the review team needs a hardware walkthrough or additional access.
 ```
 
 The demo does not exercise real server pairing or VPN. If Play requests access
