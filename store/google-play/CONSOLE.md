@@ -1,6 +1,6 @@
 # Google Play Console worksheet — IOweTea Home
 
-Prepared 2026-10-25 for a **new** Android app, package `app.iowetea.iowetea`.
+Prepared 2026-10-25 for a **new** Android app, package `app.iowetea.home`.
 This is a copy-and-check worksheet, not a record of values already entered in
 Play Console. The production Flutter flavor uses this package ID.
 

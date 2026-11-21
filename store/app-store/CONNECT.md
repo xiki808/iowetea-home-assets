@@ -1,7 +1,7 @@
 # App Store Connect worksheet — IOweTea Home
 
 Prepared 2026-10-25 for a **new** iOS app, bundle ID
-`app.iowetea.iowetea`. This is a copy-and-check worksheet, not a record of
+`app.iowetea.home`. This is a copy-and-check worksheet, not a record of
 values already entered in App Store Connect. The production Flutter flavor
 uses this bundle ID.
 
@@ -10,8 +10,8 @@ uses this bundle ID.
 | App Store Connect field | Value to enter |
 | --- | --- |
 | Name (30 characters max) | `IOweTea Home`, subject to availability alongside the old listing |
-| Bundle ID | `app.iowetea.iowetea` |
-| SKU | `app.iowetea.iowetea` (internal choice; cannot be changed after creation) |
+| Bundle ID | `app.iowetea.home` |
+| SKU | `app.iowetea.home` (internal choice; cannot be changed after creation) |
 | Primary language | English (UK), if selected for this record |
 | Subtitle (30 characters max) | `Your home, in reach` |
 | Primary category | Lifestyle (suggested; confirm the best available category) |
